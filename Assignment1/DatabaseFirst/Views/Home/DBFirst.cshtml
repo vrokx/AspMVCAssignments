@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DatabaseFirst.Models.FootBallLeague>
+@{
+    ViewBag.Title = "DBFirst";
+}
+
+<h2>DBFirst</h2>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Match Id</th>
+                <th>Team Name 1</th>
+                <th>Team Name 2</th>
+                <th>Status</th>
+                <th>Winnning Team</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.MatchId</td>
+                    <td>@item.TeamName1</td>
+                    <td>@item.TeamName2</td>
+                    <td>@item.Status</td>
+                    <td>@item.WinningTeam</td>
+                    <td>@item.Points</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
